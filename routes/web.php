@@ -16,16 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('test', 'ControllerExcel@index');
-Route::post('add', 'ControllerExcel@add');
-Route::post('edit', 'ControllerExcel@edit');
+Route::any('add', 'ControllerExcel@add');
+Route::any('edit', 'ControllerExcel@edit');
 
-Route::any('testexport', 'ControllerExcel@export');
+//excel 匯入
 Route::any('testimport', 'ControllerExcel@import');
 
-
-
-
-
+//excel匯出
+Route::any('testexport', 'ControllerExcel@export');
+Route::any('b', 'ControllerExcel@tableB');
 
 Auth::routes();
 

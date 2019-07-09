@@ -8,17 +8,22 @@
 </head>
 <body>
 
-  <h1>HELLO TEST excel</h1>
+  <h1>test excel</h1>
 
-  <form action="testimport" method="post" enctype="multipart/form-data">
+  <form action="{{ url('testimport')}}" method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
-    
-    匯入檔案:
+        
+    匯入excel檔案:
     <input type="file" name="xlsx" id="">
 
     {{-- <input type="text" name="name" id=""> --}}
     <button type="submit">匯入</button>
   </form>
+  <p>A table export</p>
+  <button disabled=""><a class="" href="{{ url('testexport') }}">匯出</a></button>
+
+  <p>B table export</p>
+  <button disabled=""><a class="" href="{{ url('b') }}">匯出</a></button>
   
 </body>
 </html>
